@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FCL Race Night - League Table</title>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+    body { 
+      font-family: 'Share Tech Mono', Arial, sans-serif; 
+      background: linear-gradient(120deg,#232526 0%, #414345 100%);
+      color: #ededed; 
+      margin: 0; 
+      padding: 0;
+    }
+
+    header {
+      background: #e10600;
+      padding: 32px 0 16px 0;
+      text-align: center;
+      box-shadow: 0 2px 8px #111a;
+    }
+    header h1 {
+      font-size: 3em;
+      letter-spacing: 2px;
+      color: #fff;
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      text-shadow: 0 2px 6px #000b;
+    }
+    .subtitle {
+      color: #fafafa;
+      font-size: 1.5em;
+      margin: 4px 0 16px 0;
+      text-shadow: 0 1px 4px #0008;
+    }
+    main {
+      max-width: 1080px;
+      margin: 32px auto;
+      padding: 0 1em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: #14171a;
+      margin-bottom: 32px;
+      box-shadow: 0 3px 24px #0006;
+      border-radius: 9px 9px 0 0;
+      overflow: hidden;
+    }
+    th,
+    td {
+      border: none;
+      padding: 12px 8px;
+      text-align: center;
+      font-size: 1.06em;
+      height: 2.2em;
+    }
+    th {
+      background: linear-gradient(90deg, #444, #222 70%);
+      color: #ffd700;
+      font-weight: bold;
+      border-bottom: 2px solid #e10600;
+      letter-spacing: 1px;
+    }
+    tr:nth-child(even) {
+      background: #18191a;
+    }
+    tr:nth-child(odd) {
+      background: #232526;
+    }
+    tr:hover {
+      background: #292c30;
+    }
+    .team-col {
+      font-weight: bold;
+      color: #e10600;
+    }
+    .note {
+      color: #aaa;
+      font-size: 0.95em;
+      margin-bottom: 18px;
+    }
+    section.results {
+      background: #191c20;
+      border-radius: 7px;
+      padding: 16px 12px 24px 12px;
+      box-shadow: 0 2px 16px #0009;
+      margin-bottom: 32px;
+    }
+    .results h2 {
+      color: #ffd700;
+      margin-top: 0;
+    }
+    img.race-screenshot {
+      max-width: 98%;
+      border-radius: 6px;
+      border: 1px solid #bbb;
+      margin-top: 12px;
+    }
+    section.next-race {
+      background: #0f1215;
+      border-radius: 7px;
+      padding: 14px 20px;
+      box-shadow: 0 2px 16px #0009;
+      margin-bottom: 48px;
+      text-align: center;
+      font-size: 1.3em;
+      color: #e10600;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    section.next-race span.flag {
+      font-size: 2em;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    section.next-race span.date-time {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>FCL Race Night</h1>
+    <div class="subtitle">Formula 1 League Table – Season 2025</div>
+  </header>
+  <main>
+    <div class="note">
+      After Round 1 (Australia). Bonus: 1pt per "Cleanest" and 1pt per "Fastest Lap" (Sprint/Main).
+    </div>
+    <!-- Drivers Championship -->
+    <table>
+      <tr>
+        <th>Pos</th>
+        <th>Driver</th>
+        <th>Team</th>
+        <th>Main Race Pts</th>
+        <th>Sprint Pts</th>
+        <th>Cleanest</th>
+        <th>Fastest Lap</th>
+        <th>Overall Points</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>MinisterOfMayhem</td>
+        <td class="team-col">Haas</td>
+        <td>25</td>
+        <td>8</td>
+        <td>0</td>
+        <td>2</td>
+        <td><b>35</b></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>VinLieger</td>
+        <td class="team-col">Aston Martin</td>
+        <td>18</td>
+        <td>7</td>
+        <td>0</td>
+        <td>0</td>
+        <td><b>25</b></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>AL3K5_100</td>
+        <td class="team-col">Ferrari</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+        <td><b>1</b></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Kimi Garrett</td>
+        <td class="team-col">McLaren</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td><b>0</b></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>garycarr72</td>
+        <td class="team-col">Mercedes</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td><b>0</b></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Rezlleb2</td>
+        <td class="team-col">Red Bull</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td><b>0</b></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Tukkerrandy</td>
+        <td class="team-col">—</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td><b>0</b></td>
+      </tr>
+    </table>
+
+    <!-- Constructors Championship -->
+    <h2 style="color:#ffd700;margin-top:40px;">Constructors’ Championship</h2>
+    <table>
+      <tr>
+        <th>Pos</th>
+        <th>Team</th>
+        <th>Drivers</th>
+        <th>Points</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td class="team-col">Haas</td>
+        <td>MinisterOfMayhem, Oliver Bearman, Esteban Ocon</td>
+        <td><b>35 + 0 = 35</b></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td class="team-col">Aston Martin</td>
+        <td>VinLieger, Fernando Alonso, Lance Stroll</td>
+        <td><b>25 + 10 + 0 = 35</b></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td class="team-col">Red Bull</td>
+        <td>Rezlleb2, Max Verstappen, Yuki Tsunoda</td>
+        <td><b>0 + 6 + 20 = 26</b></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td class="team-col">Mercedes</td>
+        <td>garycarr72, George Russell, Kimi Antonelli</td>
+        <td><b>0 + 12 + 0 = 12</b></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td class="team-col">McLaren</td>
+        <td>Kimi Garrett, Lando Norris, Oscar Piastri</td>
+        <td><b>0 + 12 + 0 = 12</b></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td class="team-col">Ferrari</td>
+        <td>AL3K5_100, Lewis Hamilton, Charles Leclerc</td>
+        <td><b>1 + 11 + 0 = 12</b></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td class="team-col">Williams</td>
+        <td>Alex Albon, Carlos Sainz</td>
+        <td><b>4 + 1 = 5</b></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td class="team-col">Kick Sauber</td>
+        <td>Nico Hülkenberg, Gabriel Bortoleto</td>
+        <td><b>3 + 0 = 3</b></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td class="team-col">Racing Bulls</td>
+        <td>Liam Lawson, Isack Hadjar</td>
+        <td><b>0 + 0 = 0</b></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td class="team-col">Alpine</td>
+        <td>Pierre Gasly, Jack Doohan</td>
+        <td><b>0 + 0 = 0</b></td>
+      </tr>
+    </table>
+
+    <!-- Kimi Garrett Cup -->
+    <h2 style="color:#e10600; margin-top:40px;">Kimi Garrett Cup – Penalty Points</h2>
+    <table>
+      <tr>
+        <th>Pos</th>
+        <th>Driver</th>
+        <th>Serious Collisions (x10)</th>
+        <th>4 Collisions per race (x3)</th>
+        <th>DNFs (x1)</th>
+        <th>Total Penalty Points</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>AL3K5_100</td>
+        <td>0</td>
+        <td>0</td>
+        <td>2</td>
+        <td><b>2</b></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>garycarr72</td>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+        <td><b>1</b></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Rezlleb2</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td><b>0</b></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Tukkerrandy</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td><b>0</b></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Kimi Garrett</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td><b>0</b></td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>MinisterOfMayhem</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td><b>0</b></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>VinLieger</td>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+        <td><b>0</b></td>
+      </tr>
+    </table>
+
+    <!-- Results Section -->
+    <section class="results">
+      <h2>Results – Australia GP (Week 1)</h2>
+      <img src="Main1.png" class="race-screenshot" alt="Australia GP Results Screenshot" />
+    </section>
+
+    <!-- Next Race Section -->
+    <section class="next-race">
+  <img src="cn-flag.jpg" alt="China Flag" style="height:1.8em; vertical-align:middle; margin-right:8px;">
+  <span class="date-time">Next Race: China GP – Sunday, 1st Practice starts at 9pm</span>
+</section>
+
+  </main>
+</body>
+</html>
